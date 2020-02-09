@@ -11,7 +11,8 @@ export const ButtonContainer = styled.div`
   width: 100%;
   height: 100%;
   border-radius: 28px;
-  border: 2px solid #C96936;
+  border: 2px solid ${({ primary = false }) => primary ? 'transparent' : '#C96936'};
+  background: ${({ primary = false }) => primary ? '#fff' : 'transparent'};
 
   transition: background 0.2s ease-in-out;
 

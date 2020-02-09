@@ -3,6 +3,7 @@ import { ContentContainer, ButtonContainer, ImageContainer, PriceContainer } fro
 import Card from '../../base/Card';
 import Text from '../../base/Text';
 import Button from '../../base/Button';
+import withHoverChecker from '../../helpers/withHoverChecker';
 
 import monitor from './assets/monitor.svg';
 import notebook from './assets/notebook.svg';
@@ -35,4 +36,4 @@ const WorkCard = props =>
     </ButtonContainer>
   </Card>
 
-export default WorkCard;
+export default withHoverChecker(WorkCard);

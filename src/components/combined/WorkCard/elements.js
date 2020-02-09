@@ -7,7 +7,7 @@ const BaseContainer = styled.div`
 export const ContentContainer = styled(BaseContainer)`
   left: 0;
   top: 0;
-  width: calc(100% - 184px);
+  width: calc(100% - 144px);
 
   h3.title { 
     font-size: 24px;

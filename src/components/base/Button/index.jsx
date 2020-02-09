@@ -3,8 +3,8 @@ import Text from '../Text';
 import { ButtonContainer } from './elements';
 import withHoverChecker from '../../helpers/withHoverChecker';
 
-const Button = ({ hover, children }) =>
-  <ButtonContainer hover = {hover}>
+const Button = ({ primary, hover, children }) =>
+  <ButtonContainer hover = {hover} primary = {primary}>
     <Text className = 'btn-text'>
       { children }
     </Text>

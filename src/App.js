@@ -1,19 +1,24 @@
 import React from 'react';
-import WorkCard from './components/combined/WorkCard';
+import WelcomeBlock from './view/WelcomeBlock';
+import WhatWeDoBlock from './view/WhatWeDoBlock';
+import OurProjectsBlock from './view/OurProjectsBlock';
+import Header from './view/Header';
 
-function App() {
-  return (
-    <>
-      <div style = {{ width: '552px', height: '250px' }}>
-        <WorkCard
-          title = 'Корпоративные сайты'
-          text = 'Создаём полноценное представительство вашей компании в интернете'
-          price = '5 000'
-          img = {'mobile'}
-        />
-      </div>
-    </>
-  );
+class App extends React.Component {
+  componentDidMount() {
+    window.scroll(0, 0);
+  }
+
+  render() {
+    return (
+      <>
+        <Header />
+        <WelcomeBlock />
+        <WhatWeDoBlock />
+        <OurProjectsBlock />
+      </>
+    );
+  }
 }
 
 export default App;

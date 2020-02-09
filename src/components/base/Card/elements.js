@@ -15,11 +15,6 @@ export const CardContainer = styled(BaseBlock)`
   box-shadow: ${({ withShadow = false }) => withShadow ? '2px 2px 10px rgba(0, 0, 0, 0.2)' : null};
   border-radius: 8px;
   transition: box-shadow 0.2s ease-in-out, top 0.2s ease-in-out;
-
-  ${props => props.hover && css`
-    box-shadow: ${({ withShadow = false }) => withShadow ? '6px 10px 18px rgba(0, 0, 0, .15)' : null};
-    top: -8px;  
-  `}
 `;
 
 export const CardInnerContainer = styled(BaseBlock)`

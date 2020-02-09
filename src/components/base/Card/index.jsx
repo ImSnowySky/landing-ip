@@ -1,10 +1,8 @@
 import React from 'react';
 import { CardContainer, CardInnerContainer } from './elements';
-import withHoverChecker from '../../helpers/withHoverChecker';
 
-const Card = ({ hover, withShadow, withPadding, fullHeight, children }) =>
+const Card = ({ withShadow, withPadding, fullHeight, children }) =>
   <CardContainer
-    hover = {hover}
     fullHeight = {fullHeight}
     withShadow = {withShadow}
   >
@@ -15,4 +13,4 @@ const Card = ({ hover, withShadow, withPadding, fullHeight, children }) =>
     }
   </CardContainer>
 
-export default withHoverChecker(Card);
+export default Card;
