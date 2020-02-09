@@ -18,11 +18,17 @@ export const GridContainer = styled.div`
 
   .grid {
     &--row {
+      &:hover .grid--cell:not(:hover) {
+        filter: blur(4px);
+      }
+  
       &:not(:first-child) { margin-top: 60px; }
+  
       .grid--cell {
         width: 378px;
         flex: none;
         ${ImageContainer} { height: 216px; }
+        transition: filter 250ms ease-in-out;
       }
     }
   }

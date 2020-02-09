@@ -3,6 +3,7 @@ import Container from '../../components/base/Container';
 import { HeaderWrapper, Logo, Menu } from './elements';
 import logo from './assets/logo.svg';
 import darkLogo from './assets/logo-dark.svg';
+import List from '../../components/base/List';
 
 class Header extends React.Component {
   state = { onTop: true };
@@ -42,7 +43,15 @@ class Header extends React.Component {
         <HeaderWrapper onTop = {this.state.onTop}>
           <Container>
             <Logo><img src = {this.state.onTop ? logo : darkLogo} alt = 'Радиан' /></Logo>
-            <Menu>123</Menu>
+            <Menu onTop = {this.state.onTop}>
+              <List elements = {[
+                <a href = "#">Услуги</a>,
+                <a href = "#">Портфолио</a>,
+                <a href = "#">Отзывы</a>,
+                <a href = "#">Контакты</a>,
+                <a href = "#">8-800-555-35-35</a>,
+              ]}/>
+            </Menu>
           </Container>
         </HeaderWrapper>
       </Container>
