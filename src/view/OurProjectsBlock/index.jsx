@@ -16,7 +16,7 @@ class OurProjectsBlock extends React.Component {
           </TitleContainer>
           <GridContainer>
             <Grid
-              elements = {cards.map(card => <ProjectCard title = {card.title} text = {card.text} img = {card.img} />)}
+              elements = {cards.map(card => card ? <ProjectCard title = {card.title} text = {card.text} img = {card.img} /> : null)}
               columns = {3}
             />
           </GridContainer>

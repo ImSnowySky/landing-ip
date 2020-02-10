@@ -17,7 +17,7 @@ class WhatWeDoBlock extends React.Component {
           </TitleContainer>
           <GridContainer>
             <Grid
-              elements = {cards.map(card => <WorkCard title = {card.title} text = {card.text} price = {card.price} img = {card.img} />)}
+              elements = {cards.map(card => card ? <WorkCard title = {card.title} text = {card.text} price = {card.price} img = {card.img} /> : null)}
               columns = {2}
             />
           </GridContainer>
