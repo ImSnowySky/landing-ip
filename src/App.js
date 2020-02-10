@@ -3,6 +3,7 @@ import WelcomeBlock from './view/WelcomeBlock';
 import WhatWeDoBlock from './view/WhatWeDoBlock';
 import OurProjectsBlock from './view/OurProjectsBlock';
 import Header from './view/Header';
+import FormBlock from './view/FormBlock';
 
 class App extends React.Component {
   componentDidMount() {
@@ -16,6 +17,7 @@ class App extends React.Component {
         <WelcomeBlock />
         <WhatWeDoBlock />
         <OurProjectsBlock />
+        <FormBlock />
       </>
     );
   }

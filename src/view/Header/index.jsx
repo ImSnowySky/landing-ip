@@ -47,8 +47,7 @@ class Header extends React.Component {
               <List elements = {[
                 <a href = "#">Услуги</a>,
                 <a href = "#">Портфолио</a>,
-                <a href = "#">Отзывы</a>,
-                <a href = "#">Контакты</a>,
+                <a href = "#">Обратная связь</a>,
                 <a href = "#">8-800-555-35-35</a>,
               ]}/>
             </Menu>
