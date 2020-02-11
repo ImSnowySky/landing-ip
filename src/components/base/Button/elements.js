@@ -16,13 +16,24 @@ export const ButtonContainer = styled.div`
 
   transition: background 0.2s ease-in-out;
 
-  ${props => props.hover && css`
+  ${props => {
+    if (props.hover && !props.disabled) return css`
     background: #C96936;
 
     .btn-text {
       color: #fff !important;
     }
-  `}
+  `}};
+
+  ${props => props.disabled && css`
+    background: #fff;
+    border: 1px solid #DADADA;
+    pointer-events: none;
+
+    .btn-text {
+      color: rgba(36, 36, 36, 0.4);
+    }
+  `};
 
   .btn-text {
     font-size: 18px;

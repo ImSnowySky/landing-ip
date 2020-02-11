@@ -15,11 +15,14 @@ class Input extends React.Component {
   makeInactive = e => {
     const isEqualNode = e.target.isEqualNode(this.wrapperRef.current)
     const isParentEqual = e.target.parentNode.isEqualNode(this.wrapperRef.current);
+    const wasFocused = this.state.focused;
     if (!isEqualNode && !isParentEqual) this.setState({ focused: false }, () => {
-      const { isRequired } = this.props;
-      const { value } = this.state;
-      if (isRequired && value === null) this.setState({ error: 'Поле обязательно для заполнения' });
-      else this.setState({ error: this.state.error });
+      if (wasFocused) {
+        const { isRequired } = this.props;
+        const { value } = this.state;
+        if (isRequired && value === null) this.setState({ error: 'Поле обязательно для заполнения' });
+        else this.setState({ error: this.state.error });
+      }
     });
   };
 
