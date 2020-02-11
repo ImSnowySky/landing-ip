@@ -14,7 +14,23 @@ class FormBlock extends React.Component {
             <Text type = 'h2'>Обсудим ваш проект?</Text>
           </TitleContainer>
           <FormContainer>
-            <Input placeholder = 'Ваше имя' isRequired/>
+            <Input
+              isRequired
+              placeholder = 'Ваше имя'
+              regexp = {/[a-zA-Zа-яА-Я\s-\.]+/g}
+              regExpErrorText = 'Неверный формат имени'
+            />
+            <Input
+              isRequired
+              placeholder = 'Ваше телефон или e-mail'
+              regexp = {/[a-zA-Z\@\.0-9]+/g}
+              regExpErrorText = 'Неверный формат телефона или почты'
+            />
+            <Input
+              placeholder = 'Ваше бюджет'
+              regexp = {/[0-9\s]+/g}
+              regExpErrorText = 'Неверный формат бюджета'
+            />
           </FormContainer>
         </Container>
       </Container>

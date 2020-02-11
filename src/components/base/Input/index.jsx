@@ -19,15 +19,28 @@ class Input extends React.Component {
       const { isRequired } = this.props;
       const { value } = this.state;
       if (isRequired && value === null) this.setState({ error: 'Поле обязательно для заполнения' });
-      else this.setState({ error: null });
+      else this.setState({ error: this.state.error });
     });
   };
 
   handleChange = e => {
+    const { onChange = () => { }} = this.props;
     if (e.target.value == '')  {
-      this.setState({ value: null });
+      this.setState({ value: null }, () => onChange(this.state.value));
     } else {
-      this.setState({ value: e.target.value });
+      const event = {...e};
+      
+      this.setState({ value: event.target.value }, () => {
+        const { regexp, regExpErrorText  } = this.props;
+        if (!regexp) return null;
+
+        const match = event.target.value.match(regexp);
+        if (!match || match[0].length !== event.target.value.length) {
+          this.setState({ error: regExpErrorText }, () => onChange(this.state.value));
+        } else {
+          this.setState({ error: null }, () => onChange(this.state.value));
+        }
+      });
     }
   }
 
