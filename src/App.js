@@ -4,6 +4,7 @@ import WhatWeDoBlock from './view/WhatWeDoBlock';
 import OurProjectsBlock from './view/OurProjectsBlock';
 import Header from './view/Header';
 import FormBlock from './view/FormBlock';
+import Footer from './view/Footer';
 
 class App extends React.Component {
   componentDidMount() {
@@ -18,6 +19,7 @@ class App extends React.Component {
         <WhatWeDoBlock />
         <OurProjectsBlock />
         <FormBlock />
+        <Footer />
       </>
     );
   }

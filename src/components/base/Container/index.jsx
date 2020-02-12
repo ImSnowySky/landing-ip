@@ -1,38 +1,20 @@
 import React from 'react';
-import { ContainerWrapper } from './elements';
+import { ContainerBlock } from './elements';
 
-class Container extends React.Component {
-  state = {
-    screenWidth: window.innerWidth,
-    screenHeight: window.innerHeight,
-  };
+const Container = ({ children, fullHeight = false, bgColor }) => {
+  const [screenHeight, changeScreenHeight] = React.useState(window.innerHeight);
+  const changeHeight = () => changeScreenHeight(window.innerHeight);
 
-  changeSize = () => this.setState({
-    screenWidth: window.innerWidth,
-    screenHeight: window.innerHeight,
+  React.useEffect(() => {
+    window.addEventListener('resize', changeHeight);
+    return () => window.removeEventListener('resize', changeHeight);
   });
 
-  componentDidMount() {
-    window.addEventListener('resize', this.changeSize);
-  }
-
-  render() {
-    const { screenWidth, screenHeight } = this.state;
-    const { children, fullWidth = false, fullHeight = false, style = null, justify } = this.props;
-
-    return (
-      <ContainerWrapper
-        fullWidth = {fullWidth}
-        fullHeight = {fullHeight}
-        width = {screenWidth}
-        height = {screenHeight}
-        justify = {justify}
-        style = {style}
-      >
-        {children}
-      </ContainerWrapper>
-    )
-  }
+  return (
+    <ContainerBlock fullHeight = {fullHeight} screenHeight = {screenHeight} bgColor = {bgColor}>
+      {children}
+    </ContainerBlock>
+  )
 }
 
 export default Container;

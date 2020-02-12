@@ -1,61 +1,45 @@
 import React from 'react';
-import Container from '../../components/base/Container';
 import { HeaderWrapper, Logo, Menu } from './elements';
 import logo from './assets/logo.svg';
 import darkLogo from './assets/logo-dark.svg';
 import List from '../../components/base/List';
+import withID from '../../components/helpers/withID';
+import { InnerContainer } from '../../components/base/shared';
 
-class Header extends React.Component {
-  state = { onTop: true };
+const Header = () => {
+  const [onTop, changeOnTop] = React.useState(true);
+  const [scrolling, changeScrolling] = React.useState(false);
 
-  changeHeaderPosition = () => {
+  const changeHeaderPosition = () => {
     const { scrollY } = window;
-    const { onTop, scrolling } = this.state;
+    
+    if (scrollY >= 48 && onTop) changeOnTop(false);
+    else if (scrollY < 48 && !onTop) changeOnTop(true);
 
-    scrollY >= 32 && onTop && this.setState({ onTop: false });
-    scrollY < 32 && !onTop && this.setState({ onTop: true });
-
-    scrollY >= window.innerHeight && !scrolling && this.setState({ scrolling: true });
-    scrollY < window.innerHeight && scrolling && this.setState({ scrolling: false });
+    if (scrollY >= window.innerHeight && !scrolling) changeScrolling(true);
+    else if (scrollY < window.innerHeight && scrolling) changeScrolling(false);
   }
 
-  componentDidMount() {
-    window.addEventListener('scroll', this.changeHeaderPosition);
-  }
+  React.useEffect(() => {
+    window.addEventListener('scroll', changeHeaderPosition);
+    return () => window.removeEventListener('scroll', changeHeaderPosition);
+  });
 
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.changeHeaderPosition);
-  }
+  return (
+    <HeaderWrapper onTop = {onTop} scrolling = {scrolling}>
+      <InnerContainer>
+        <Logo><img src = {onTop ? logo : darkLogo} alt = 'Радиан' /></Logo>
+        <Menu onTop = {onTop}>
+          <List elements = {[
+            <a href = "#">Услуги</a>,
+            <a href = "#">Портфолио</a>,
+            <a href = "#">Обратная связь</a>,
+            <a href = "#">8-800-555-35-35</a>,
+          ]}/>
+        </Menu>
+      </InnerContainer>
+    </HeaderWrapper>
+  );
+}
 
-  render() {
-    return (
-      <Container
-        justify = 'center'
-        fullWidth
-        style = {{
-          position: this.state.scrolling ? 'fixed' : 'absolute',
-          zIndex: 10,
-          left: 0,
-          width: '100%',
-          top: this.state.scrolling ? 0 : this.state.onTop ? 0 : window.innerHeight, 
-        }}
-      >
-        <HeaderWrapper onTop = {this.state.onTop}>
-          <Container>
-            <Logo><img src = {this.state.onTop ? logo : darkLogo} alt = 'Радиан' /></Logo>
-            <Menu onTop = {this.state.onTop}>
-              <List elements = {[
-                <a href = "#">Услуги</a>,
-                <a href = "#">Портфолио</a>,
-                <a href = "#">Обратная связь</a>,
-                <a href = "#">8-800-555-35-35</a>,
-              ]}/>
-            </Menu>
-          </Container>
-        </HeaderWrapper>
-      </Container>
-    )
-  }
-};
-
-export default Header;
+export default withID('header', Header);

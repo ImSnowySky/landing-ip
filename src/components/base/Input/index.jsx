@@ -4,7 +4,7 @@ import { InputControll, PlaceHolder, RealInput, Star, Error } from './elements';
 class Input extends React.Component {
   wrapperRef = React.createRef();
   inputRef = React.createRef();
-  state = { focuesd: false, value: null, error: null };
+  state = { focused: false, value: null, error: null };
 
   makeActive = () => this.setState({ focused: true}, () => {
     if (this.inputRef && this.inputRef.current) {

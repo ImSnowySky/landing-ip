@@ -2,11 +2,14 @@ import styled from 'styled-components';
 
 export const HeaderWrapper = styled.div`
   display: flex;
-  position: relative;
+  position: ${({ scrolling }) => scrolling ? 'fixed' : 'absolute'};
   width: 100%;
   align-items: center;
   background: ${({ onTop }) => onTop ? 'transparent' : 'white'};
   height: 96px;
+  z-index: 15;
+  top: ${({ scrolling, onTop}) => !scrolling && !onTop ? window.innerHeight : 0}px;
+  left: 0%;
 
   & > div {
     height: 100%;

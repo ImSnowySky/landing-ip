@@ -1,5 +1,16 @@
 import styled, { css } from 'styled-components';
 import { InputControll } from '../../components/base/Input/elements';
+import telegram from './assets/telegram.svg';
+import telegramHover from './assets/telegram_hover.svg';
+import whatsapp from './assets/whatsapp.svg';
+import whatsapp_hover from './assets/whatsapp_hover.svg';
+
+const icons = {
+  telegram: { default: telegram, hover: telegramHover },
+  whatsapp: { default: whatsapp, hover: whatsapp_hover },
+};
+
+const getIcon = (name, state) => icons[name][state || 'default'] || null; 
 
 export const TitleContainer = styled.div`
   width: 100%;
@@ -111,4 +122,25 @@ export const ContactsInfoText = styled.div`
   font-size: 16px;
   line-height: 24px;
   margin-top: 8px;
+`;
+
+export const MessengerBlock = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+`;
+
+export const Messenger = styled.div`  
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-image: ${({ icon }) => `url(${getIcon(icon)})`};
+
+  &:hover {
+    background-image: ${({ icon }) => `url(${getIcon(icon, 'hover')})`}
+  }
+
+  &:not(:last-of-type) {
+    margin-right: 32px;
+  }
 `;

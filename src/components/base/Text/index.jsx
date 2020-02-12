@@ -27,10 +27,7 @@ const TEXT_TYPES = props => [{
 
 
 const Text = props => {
-  const preparedProps = {
-    ...props,
-    type: props.type || 'span',
-  };
+  const preparedProps = { ...props, type: props.type || 'span' };
 
   return (
     <TextWrapper accent = {props.accent}>

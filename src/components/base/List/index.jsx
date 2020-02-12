@@ -1,15 +1,13 @@
 import React from 'react';
 import { ListContainer, ListElement } from './elements';
 
-class List extends React.Component {
-  render() {
-    const { elements, direction, active } = this.props;
-    return (
-      <ListContainer direction = {direction}>
-        { elements.map((el, i) => <ListElement active = {active === i} direction = {direction}>{el}</ListElement>) }
-      </ListContainer>
-    )
-  }
-};
+const wrappedElements = (elements, direction, active ) =>
+  elements.map((el, i) =>
+    <ListElement active = {active === i} direction = {direction}>{el}</ListElement>
+  )
+
+const List = ({ elements, direction, active }) => <ListContainer direction = {direction}>
+  {wrappedElements(elements, direction, active)}
+</ListContainer>
 
 export default List;

@@ -30,9 +30,9 @@ class Grid extends React.Component {
             <CardRow key = {i} className = 'grid--row'>
               {
                 group.map((element, j) =>
-                  <CardCell key = {j} className = 'grid--cell'>
-                    { element }
-                  </CardCell>  
+                  element
+                    ? <CardCell key = {j} className = 'grid--cell'>{ element }</CardCell> 
+                    : null
                 )
               }
             </CardRow>  
