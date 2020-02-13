@@ -2,9 +2,8 @@ import React from 'react';
 import Container from '../../components/base/Container';
 import Text from '../../components/base/Text';
 import Button from '../../components/base/Button';
-import { InnerContainer } from '../../components/base/shared';
 import withID from '../../components/helpers/withID';
-import { BackgroundVideo, TitleContainer, DescriptionContainer, ButtonContainer, SwipeDown } from './elements';
+import { PaddingInnerContainer, BackgroundVideo, TitleContainer, DescriptionContainer, ButtonContainer, SwipeDown } from './elements';
 import bgVideo from './assets/bg-video.mp4';
 import bg from './assets/bg.svg';
 
@@ -15,7 +14,7 @@ class WelcomeBlock extends React.Component {
         <BackgroundVideo preload = 'auto' loop = 'true' autoPlay muted poster = {bg}>
           <source src = {bgVideo} type = 'video/mp4' />
         </BackgroundVideo>
-        <InnerContainer>
+        <PaddingInnerContainer>
           <TitleContainer>
             <Text type = 'h1'>Веб-студия Радиан</Text>
           </TitleContainer>
@@ -25,7 +24,7 @@ class WelcomeBlock extends React.Component {
           <ButtonContainer>
             <Button primary>Обсудить проект</Button>
           </ButtonContainer>
-        </InnerContainer>
+        </PaddingInnerContainer>
         <SwipeDown />
       </Container>
     )

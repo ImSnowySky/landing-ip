@@ -25,19 +25,19 @@ const FormBlock = () => <Container bgColor = '#fff'>
         <ButtonContainer><Button disabled>Отправить</Button> </ButtonContainer>
       </FormWrapper>
       <ContactsContainer>
-        <ContactsTitle>Контакты</ContactsTitle>
+        <ContactsTitle><Text type = 'h3'>Контакты</Text></ContactsTitle>
         <ContactsInfo>
           <ContactsInfoBlock>
-            <ContactsInfoTitle>Телефон</ContactsInfoTitle>
-            <ContactsInfoText>8-800-555-35-35</ContactsInfoText>
+            <ContactsInfoTitle><Text type = 'h4'>Телефон</Text></ContactsInfoTitle>
+            <ContactsInfoText><Text type = 'span'>8-800-555-35-35</Text></ContactsInfoText>
           </ContactsInfoBlock>
           <ContactsInfoBlock>
-            <ContactsInfoTitle>Телефон</ContactsInfoTitle>
-            <ContactsInfoText>8-800-555-35-35</ContactsInfoText>                  
+            <ContactsInfoTitle><Text type = 'h4'>Телефон</Text></ContactsInfoTitle>
+            <ContactsInfoText><Text type = 'span'>8-800-555-35-35</Text></ContactsInfoText>                  
           </ContactsInfoBlock>
         </ContactsInfo>
         <ContactsInfo>
-            <ContactsInfoTitle centered>Мессенджеры</ContactsInfoTitle>
+            <ContactsInfoTitle centered><Text type = 'h4'>Мессенджеры</Text></ContactsInfoTitle>
         </ContactsInfo>
         <MessengerBlock><Messenger icon = 'telegram' /><Messenger icon = 'whatsapp' /></MessengerBlock>
       </ContactsContainer>

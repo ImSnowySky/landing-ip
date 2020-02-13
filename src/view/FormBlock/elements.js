@@ -53,11 +53,12 @@ export const FormWrapper = styled.div`
   box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.25);
   z-index: 5;
 
-  span {
+  span:not(.star) {
     font-weight: 500;
     font-size: 18px;
     line-height: 24px;
     color: #242424;
+    font-family: 'Golos-Medium', 'Arial', sans-serif;
   }
 `;
 
@@ -72,9 +73,10 @@ export const InputWrapper = styled.div`
     }    
   }
 
-  span {
+  span:not(.star) {
     font-size: 10px;
     line-height: 12px;
+    font-family: 'Golos-Normal', 'Arial', sans-serif;
   }
 `;
 

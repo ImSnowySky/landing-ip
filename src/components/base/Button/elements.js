@@ -40,5 +40,6 @@ export const ButtonContainer = styled.div`
     line-height: 22px;
     font-weight: bold;
     transition: color 0.2s ease-in-out;
+    font-family: 'Golos-Bold', 'Arial', sans-serif;
   }
 `;

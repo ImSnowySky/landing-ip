@@ -19,8 +19,9 @@ export const HeaderWrapper = styled.div`
 `;
 
 export const Logo = styled.div`
-  margin: 0 auto 0 16px;
   width: 184px;
+  margin-left: -4px;
+  margin-right: auto;
   height: 96px;
   display: inline-flex;
   justify-content: flex-start;

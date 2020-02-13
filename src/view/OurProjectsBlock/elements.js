@@ -21,7 +21,9 @@ export const GridContainer = styled.div`
         filter: blur(4px);
     }
     &--row {  
-      &:not(:first-child) { margin-top: 60px; }
+      &:not(:first-child) {
+        .grid--cell { padding-top: 60px }
+      }
 
       .grid--cell {
         transition: filter 250ms ease-in-out;
@@ -39,14 +41,14 @@ export const GridContainer = styled.div`
         .grid--cell {
           width: 552px;
           flex: none;
-          ${ImageContainer} { height: 168px; width: 264px; border-radius: 10px; }
+          ${ImageContainer} { height: 200px; width: 264px; border-radius: 10px; }
           ${ContentContainer} {
             position: absolute;
             top: 0;
             left: 288px;
             width: 264px;
             margin-top: 0;
-            height: 168px;
+            height: 200px;
             justify-content: center;
           }
         }

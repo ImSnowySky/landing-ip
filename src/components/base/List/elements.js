@@ -17,6 +17,10 @@ export const ListElement = styled.li`
   top: 0;
   left: 0;
 
+  a {
+    font-family: 'Golos-Medium', 'Arial', sans-serif;
+  }
+
   ${({ active, direction = 'row' }) => {
     if (active && direction === 'row') return css`
       &::after {

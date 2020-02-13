@@ -63,7 +63,7 @@ class Input extends React.Component {
         { placeholder
             ? <PlaceHolder onTop = {focused || value !== null} error = {error}>
                 {placeholder}
-                { isRequired ? <Star>*</Star> : null}
+                { isRequired ? <Star className = 'star'>*</Star> : null}
               </PlaceHolder>
             : null
         }

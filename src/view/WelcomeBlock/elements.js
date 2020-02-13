@@ -1,10 +1,14 @@
 import styled from 'styled-components';
 import swipeDown from './assets/swipe-down.svg';
+import { InnerContainer } from '../../components/base/shared';
 
 const Default = styled.div`
-  font-weight: 800;
   text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   color: #fff;
+`;
+
+export const PaddingInnerContainer = styled(InnerContainer)`
+  padding: 0 88px;
 `;
 
 export const TitleContainer = styled(Default)`
@@ -46,6 +50,7 @@ export const DescriptionContainer = styled(Default)`
   p {
     font-size: 32px;
     line-height: 40px;
+    font-family: 'Gilroy-ExtraBold', 'Open Sans', 'Roboto', sans-serif;
   }
 `;
 

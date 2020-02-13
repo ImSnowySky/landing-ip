@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const InnerContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: ${({ direction = 'column' }) => direction};
   position: relative;
   top: 0;
   left: 0;
@@ -10,7 +10,7 @@ export const InnerContainer = styled.div`
   padding: 0 76px;
   z-index: 5;
   box-sizing: border-box;
-  margin: ${({ withMargin }) => withMargin ? 64 : 0}px auto;
+  margin: ${({ withMargin }) => withMargin ? 72 : 0}px auto;
 `;
 
 export const TitleContainer = styled.div`

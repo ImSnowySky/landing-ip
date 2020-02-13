@@ -1,10 +1,9 @@
 import React from 'react';
-import { HeaderWrapper, Logo, Menu } from './elements';
-import logo from './assets/logo.svg';
-import darkLogo from './assets/logo-dark.svg';
+import { HeaderWrapper, Menu } from './elements';
 import List from '../../components/base/List';
 import withID from '../../components/helpers/withID';
 import { InnerContainer } from '../../components/base/shared';
+import Logo from '../../components/base/Logo';
 
 const Header = () => {
   const [onTop, changeOnTop] = React.useState(true);
@@ -28,7 +27,7 @@ const Header = () => {
   return (
     <HeaderWrapper onTop = {onTop} scrolling = {scrolling}>
       <InnerContainer>
-        <Logo><img src = {onTop ? logo : darkLogo} alt = 'Радиан' /></Logo>
+        <Logo variation = {onTop ? 'light' : 'dark'} />
         <Menu onTop = {onTop}>
           <List elements = {[
             <a href = "#">Услуги</a>,

@@ -16,6 +16,7 @@ export const PlaceHolder = styled.div`
   padding: 16px;
   box-sizing: border-box;
   color: rgba(36, 36, 36, 0.8);
+  font-family: 'Golos-Medium', 'Arial', sans-serif;
 
   transition: height 0.1s ease-in-out,
               font-size 0.1s ease-in-out,
@@ -36,6 +37,7 @@ export const PlaceHolder = styled.div`
     ${Star} {
       font-size: 12px;
       line-height: 14px;
+      font-family: 'Golos-Medium', 'Arial', sans-serif;
     }
   `};
 
@@ -57,7 +59,7 @@ export const RealInput = styled.input`
   border: 0;
   outline: none;
   position: absolute;
-  top: 6px;
+  top: 5px;
   left: 2px;
   width: calc(100% - 4px);
   height: calc(100% - 6px);
@@ -67,6 +69,7 @@ export const RealInput = styled.input`
   font-size: 16px;
   line-height: 24px;
   border-radius: 8px;
+  font-family: 'Golos-Medium', 'Arial', sans-serif;
 `;
 
 export const InputControll = styled.div`
