@@ -18,16 +18,6 @@ export const HeaderWrapper = styled.div`
   }
 `;
 
-export const Logo = styled.div`
-  width: 184px;
-  margin-left: -4px;
-  margin-right: auto;
-  height: 96px;
-  display: inline-flex;
-  justify-content: flex-start;
-  align-items: center;
-`;
-
 export const Menu = styled.div`
   display: inline-flex;
   justify-self: flex-end;

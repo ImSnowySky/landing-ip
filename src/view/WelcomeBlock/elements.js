@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import swipeDown from './assets/swipe-down.svg';
 import { InnerContainer } from '../../components/base/shared';
+import bg from './assets/bg.svg';
 
 const Default = styled.div`
   text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -20,26 +21,30 @@ export const TitleContainer = styled(Default)`
   }
 `;
 
-export const BackgroundVideo = styled.video`
+export const VideoWrapper = styled.div`
   position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0%;
-  overflow: hidden;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  background-image: url(${bg});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 0;
+  left: 0;
+`;
 
-  
-  @media (min-aspect-ratio: 16/9) {
-    width: 100%;
-    height: auto;
-  }
-
-  @media (max-aspect-ratio: 16/9) {
-    width: 100%;
-    height: auto;
-  }
+export const BackgroundVideo = styled.video`
+  position: fixed;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
 `
 
 export const DescriptionContainer = styled(Default)`

@@ -9,7 +9,7 @@ export const ContainerBlock = styled.div`
   justify-content: center;
   width: 100%;
   min-height: ${({ fullHeight = false, screenHeight }) => fullHeight ? `${screenHeight}px` : 'auto'};
-  padding: ${({ fullWidth = false }) => fullWidth ? 0 : '0 72px'};
+  padding: 0;
   margin: 0 auto;
   box-sizing: border-box;
   background-color: ${({ bgColor = 'transparent' }) => bgColor};

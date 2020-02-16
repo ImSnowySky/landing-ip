@@ -34,6 +34,10 @@ export const GridContainer = styled.div`
           width: 378px;
           flex: none;
           ${ImageContainer} { height: 216px; }
+
+          @media (max-width: 1279px) {
+            width: 312px;
+          }
         }
       }
 
@@ -50,6 +54,17 @@ export const GridContainer = styled.div`
             margin-top: 0;
             height: 200px;
             justify-content: center;
+          }
+
+          @media (max-width: 1279px) {
+            width: 468px;
+
+            ${ImageContainer} { height: 152px; width: 216px; }
+            ${ContentContainer} {
+              left: 232px;
+              height: 152px;
+              width: 206px;
+            }
           }
         }
       }

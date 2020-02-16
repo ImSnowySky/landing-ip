@@ -30,5 +30,10 @@ export const Description = styled.div`
   font-size: 16px;
   line-height: 24px;
   margin-top: 16px;
-  width: calc(100% - 48px);
+  width: 100%;
+
+  @media (max-width: 1279px) {
+    font-size: 14px;
+    line-height: 20px;
+  }
 `;

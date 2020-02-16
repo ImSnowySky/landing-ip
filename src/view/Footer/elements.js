@@ -22,10 +22,18 @@ export const FooterContent = styled.div`
 
   &:nth-of-type(2) {
     margin-right: 204px;
+
+    @media (max-width: 1279px) {
+      margin-right: 60px;
+    }
   }
 
   &:nth-of-type(3) {
     margin-right: 172px;
+
+    @media (max-width: 1279px) {
+      margin-right: 130px;
+    }
   }
 
   & > div {

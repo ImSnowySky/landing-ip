@@ -11,6 +11,16 @@ export const InnerContainer = styled.div`
   z-index: 5;
   box-sizing: border-box;
   margin: ${({ withMargin }) => withMargin ? 72 : 0}px auto;
+
+  @media (max-width: 1279px) {
+    width: 1024px;
+    padding: 0 44px;
+  }
+  
+  @media (max-width: 1023px) {
+    width: 768px;
+    padding: 24px;
+  }
 `;
 
 export const TitleContainer = styled.div`
