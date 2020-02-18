@@ -16,6 +16,10 @@ export const HeaderWrapper = styled.div`
     justify-content: center;
     flex-direction: row;
   }
+
+  @media (max-width: 1023px) {
+    & > div { align-items: center; }
+  }
 `;
 
 export const Menu = styled.div`
@@ -25,6 +29,7 @@ export const Menu = styled.div`
   height: 100%;
   justify-content: center;
   align-items: center;
+  margin-left: auto;
 
   ul { height: 17px; }
 
@@ -46,5 +51,9 @@ export const Menu = styled.div`
     &:hover a {
       color: #C96936;
     }
+  }
+
+  @media (max-width: 1023px) {
+    margin-right: -24px;
   }
 `;

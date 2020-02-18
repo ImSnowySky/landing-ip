@@ -34,6 +34,10 @@ export const FooterContent = styled.div`
     @media (max-width: 1279px) {
       margin-right: 130px;
     }
+
+    @media (max-width: 1023px) {
+      display: none;
+    }
   }
 
   & > div {

@@ -4,24 +4,31 @@ import { TitleContainer } from '../../components/base/shared';
 export const GridContainer = styled.div`
   margin-top: 64px;
 
+  @media (max-width: 1023px) {
+    margin-top: 52px;
+  }
+
   .grid {
     &--row {
       &:not(:first-child) {
         margin-top: 24px;
       }
-
-      @media (max-width: 1023px) {
-        flex-direction: column;
-      }
     }
     &--cell {
       width: 568px;
       height: 250px;
+    }
 
-      @media (max-width: 1023px) {
+    @media (max-width: 1023px) {
+      &--row {
+        flex-direction: column;
+      }
+      &--cell {
+        flex: none;
         width: 100%;
+        height: 224px;
 
-        &:not(:first-child) {
+        &:last-of-type {
           margin-top: 24px;
         }
       }
@@ -31,4 +38,8 @@ export const GridContainer = styled.div`
 
 export const TitleContainerWithMargin = styled(TitleContainer)`
   margin-top: 92px;
+
+  @media (max-width: 1023px) {
+    margin-top: 52px;
+  }
 `;

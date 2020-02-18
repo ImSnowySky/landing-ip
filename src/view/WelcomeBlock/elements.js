@@ -10,6 +10,14 @@ const Default = styled.div`
 
 export const PaddingInnerContainer = styled(InnerContainer)`
   padding: 0 88px;
+
+  @media (max-width: 1279px) {
+    padding: 0 53px;
+  }
+
+  @media (max-width: 1023px) {
+    padding: 0 49px;
+  }
 `;
 
 export const TitleContainer = styled(Default)`
@@ -48,13 +56,13 @@ export const BackgroundVideo = styled.video`
 `
 
 export const DescriptionContainer = styled(Default)`
-  width: 730px;
+  width: 100%;
   margin-top: 72px;
   text-shadow: 0px 0px 12px rgba(0, 0, 0, 1);
 
   p {
     font-size: 32px;
-    line-height: 40px;
+    line-height: 48px;
     font-family: 'Gilroy-ExtraBold', 'Open Sans', 'Roboto', sans-serif;
   }
 `;

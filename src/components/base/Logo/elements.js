@@ -11,6 +11,6 @@ export const LogoContainer = styled.div`
 
   @media (max-width: 1023px) {
     width: 128px;
-    height: 58px;
+    height: 56px;
   }
 `;

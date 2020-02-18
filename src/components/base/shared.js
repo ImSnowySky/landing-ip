@@ -16,10 +16,11 @@ export const InnerContainer = styled.div`
     width: 1024px;
     padding: 0 44px;
   }
-  
+
   @media (max-width: 1023px) {
     width: 768px;
-    padding: 24px;
+    margin: ${({ withMargin }) => withMargin ? 60 : 0}px auto;
+    padding: 0 40px;
   }
 `;
 
@@ -30,7 +31,7 @@ export const TitleContainer = styled.div`
 
   h2 {
     font-size: 32px;
-    line-height: 32px;
+    line-height: 40px;
     font-weight: 800;
   }
 `;

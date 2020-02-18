@@ -29,6 +29,14 @@ export const FormContainer = styled.div`
   height: 518px;
   margin: 96px auto 0;
   display: flex;
+
+  @media (max-width: 1023px) {
+    margin: 52px auto 0;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    height: 764px;
+  }
 `;
 
 export const ContactsContainer = styled.div`
@@ -41,6 +49,13 @@ export const ContactsContainer = styled.div`
   transform: translateY(-50%);
   box-sizing: border-box;
   padding: 32px 54px;
+
+  @media (max-width: 1023px) {
+    top: 132px;
+    left: 0;
+    border-radius: 0 0 16px 16px;
+    width: 512px;
+  }
 `;
 
 export const FormWrapper = styled.div`
@@ -59,6 +74,12 @@ export const FormWrapper = styled.div`
     line-height: 24px;
     color: #242424;
     font-family: 'Golos-Medium', 'Arial', sans-serif;
+  }
+
+  @media (max-width: 1023px) {
+    width: 688px;
+    height: 488px;
+    padding: 24px 48px;
   }
 `;
 
@@ -94,6 +115,10 @@ export const ContactsTitle = styled.div`
   line-height: 24px;
   color: #242424;
   margin-bottom: 32px;
+
+  @media (max-width: 1023px) {
+    text-align: center;
+  }
 `;
 
 export const ContactsInfo = styled.div`
@@ -110,6 +135,12 @@ export const ContactsInfoBlock = styled.div`
   flex-direction: column;
   width: 50%;
   color: #242424;
+
+  @media (max-width: 1023px) {
+    width: auto;
+    flex: 1;
+    padding: 0 30px;
+  }
 `;
 
 export const ContactsInfoTitle = styled.div`

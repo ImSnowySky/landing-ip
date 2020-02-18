@@ -16,18 +16,22 @@ export const TitleContainer = styled.div`
 export const GridContainer = styled.div`
   margin-top: 64px;
 
+  @media (max-width: 1023px) {
+    margin-top: 52px;
+  }
+
   .grid {
     &:hover .grid--row .grid--cell:not(:hover) {
-        filter: blur(4px);
+      filter: blur(4px);
+
+      @media (max-width: 1023px) { filter: none }
     }
     &--row {  
       &:not(:first-child) {
         .grid--cell { padding-top: 60px }
       }
 
-      .grid--cell {
-        transition: filter 250ms ease-in-out;
-      }
+      .grid--cell { transition: filter 250ms ease-in-out; }
 
       &:nth-child(odd) {
         .grid--cell {
@@ -64,6 +68,47 @@ export const GridContainer = styled.div`
               left: 232px;
               height: 152px;
               width: 206px;
+            }
+          }
+        }
+      }
+
+      @media (max-width: 1023px) {
+        &:nth-child(odd), &:nth-child(even) {
+          flex-direction: column;
+
+          .grid--cell {
+            flex: none;
+            width: 100%;
+            flex-direction: row;
+            padding-top: 32px;
+
+            & > div { flex-direction: row }
+
+            ${ImageContainer} {
+              width: 310px;
+              height: 200px;
+              border-radius: 8px;
+              flex: none;
+            }
+
+            ${ContentContainer} {
+              position: static;
+              width: 336px;
+              height: 200px;
+              padding-left: 16px;
+              justify-content: center;
+              margin-top: 0;
+              flex: none;
+            }
+
+            &:nth-child(even) {
+              & > div { flex-direction: row-reverse; }
+
+              ${ContentContainer} {
+                text-align: right;
+                padding-right: 16px;
+              }
             }
           }
         }
