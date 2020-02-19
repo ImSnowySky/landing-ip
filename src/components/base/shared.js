@@ -22,6 +22,12 @@ export const InnerContainer = styled.div`
     margin: ${({ withMargin }) => withMargin ? 60 : 0}px auto;
     padding: 0 40px;
   }
+
+  @media (max-width: 767px) {
+    width: 568px;
+    padding: 0 24px;
+    margin: ${({ withMargin }) => withMargin ? 48 : 0}px auto;
+  }
 `;
 
 export const TitleContainer = styled.div`

@@ -8,7 +8,7 @@ export const HeaderWrapper = styled.div`
   background: ${({ onTop }) => onTop ? 'transparent' : 'white'};
   height: 96px;
   z-index: 15;
-  top: ${({ scrolling, onTop}) => !scrolling && !onTop ? window.innerHeight : 0}px;
+  top: ${({ scrolling, onTop}) => !scrolling && !onTop ? window.screen.height : 0}px;
   left: 0%;
 
   & > div {
@@ -19,6 +19,10 @@ export const HeaderWrapper = styled.div`
 
   @media (max-width: 1023px) {
     & > div { align-items: center; }
+  }
+
+  @media (max-width: 767px) {
+    height: 56px;
   }
 `;
 

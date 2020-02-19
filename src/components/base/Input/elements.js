@@ -44,6 +44,14 @@ export const PlaceHolder = styled.div`
   ${props => props.error && css`
     color: #C93836;
   `};
+
+  @media (max-width: 767px) {
+    padding: 7px 16px;
+
+    ${props => props.onTop && css`
+      padding: 0 8px;
+    `}
+  }
 `;
 
 export const Error = styled.div`
@@ -53,6 +61,12 @@ export const Error = styled.div`
   font-size: 12px;
   line-height: 14px;
   color: #C93836;
+  font-family: 'Golos-Regular', 'Arial', sans-serif;
+  font-weight: normal;
+
+  @media (max-width: 767px) {
+    top: calc(100% + 4px);
+  }
 `;
 
 export const RealInput = styled.input`
@@ -93,4 +107,10 @@ export const InputControll = styled.div`
   ${props => props.error && css`
     border-color: #C93836;
   `};
+
+  @media (max-width: 767px) {
+    height: 40px;
+    font-size: 12px;
+    line-height: 17px;
+  }
 `;

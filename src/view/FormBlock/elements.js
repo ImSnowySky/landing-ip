@@ -37,6 +37,10 @@ export const FormContainer = styled.div`
     align-items: center;
     height: 764px;
   }
+
+  @media (max-width: 767px) {
+    height: 680px;
+  }
 `;
 
 export const ContactsContainer = styled.div`
@@ -56,6 +60,12 @@ export const ContactsContainer = styled.div`
     border-radius: 0 0 16px 16px;
     width: 512px;
   }
+
+  @media (max-width: 767px) {
+    width: 376px;
+    padding: 32px 12px;
+    height: 250px;
+  }
 `;
 
 export const FormWrapper = styled.div`
@@ -74,12 +84,22 @@ export const FormWrapper = styled.div`
     line-height: 24px;
     color: #242424;
     font-family: 'Golos-Medium', 'Arial', sans-serif;
+
+    @media (max-width: 767px) {
+      font-size: 12px;
+      line-height: 18px;
+    }
   }
 
   @media (max-width: 1023px) {
     width: 688px;
     height: 488px;
     padding: 24px 48px;
+  }
+
+  @media (max-width: 767px) {
+    width: 520px;
+    height: 424px;
   }
 `;
 
@@ -91,7 +111,7 @@ export const InputWrapper = styled.div`
     margin-bottom: 38px;
     &:nth-child(3) {
       margin-bottom: 8px;
-    }    
+    }
   }
 
   span:not(.star) {
@@ -107,6 +127,13 @@ export const ButtonContainer = styled.div`
   border-radius: 28px;
   background: #fff;
   margin: 0 auto;
+
+  @media (max-width: 767px) {
+    div span.btn-text {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
 `;
 
 export const ContactsTitle = styled.div`
@@ -119,6 +146,10 @@ export const ContactsTitle = styled.div`
   @media (max-width: 1023px) {
     text-align: center;
   }
+
+  @media (max-width: 767px) {
+    margin-bottom: 16px;
+  }
 `;
 
 export const ContactsInfo = styled.div`
@@ -127,6 +158,10 @@ export const ContactsInfo = styled.div`
 
   &:nth-child(3) {
     margin-top: 32px;
+
+    @media (max-width: 767px) {
+      margin-top: 16px;
+    }
   }
 `;
 
@@ -155,6 +190,11 @@ export const ContactsInfoText = styled.div`
   font-size: 16px;
   line-height: 24px;
   margin-top: 8px;
+
+  @media (max-width: 767px) {
+    font-size: 14px;
+    line-height: 18px;
+  }
 `;
 
 export const MessengerBlock = styled.div`

@@ -42,4 +42,11 @@ export const ButtonContainer = styled.div`
     transition: color 0.2s ease-in-out;
     font-family: 'Golos-Bold', 'Arial', sans-serif;
   }
+
+  @media (max-width: 767px) {
+    .btn-text {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
 `;

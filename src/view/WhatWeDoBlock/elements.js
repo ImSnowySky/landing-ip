@@ -33,6 +33,12 @@ export const GridContainer = styled.div`
         }
       }
     }
+
+    @media (max-width: 767px) {
+      &--cell {
+        height: 192px;
+      }
+    }
   }
 `;
 
@@ -41,5 +47,9 @@ export const TitleContainerWithMargin = styled(TitleContainer)`
 
   @media (max-width: 1023px) {
     margin-top: 52px;
+  }
+
+  @media (max-width: 767px) {
+    margin-top: 42px;
   }
 `;

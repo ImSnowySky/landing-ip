@@ -34,6 +34,13 @@ export const ContentContainer = styled(BaseContainer)`
     h3.title { font-size: 22px; line-height: 44px };
     p.content { font-size: 16px; line-height: 22px; margin-top: 12px };
   }
+
+  @media (max-width: 767px) {
+    width: 320px;
+
+    h3.title { font-size: 16px; line-height: 20px }
+    p.content { font-size: 14px; line-height: 18px }
+  }
 `;
 
 export const ImageContainer = styled(BaseContainer)`
@@ -42,11 +49,16 @@ export const ImageContainer = styled(BaseContainer)`
   width: 128px;
   height: 128px;
 
+  img { width: 100%; height: 100% }
+
   @media (max-width: 1279px) {
     width: 112px;
     height: 112px;
+  }
 
-    img { width: 112px; height: 112px }
+  @media (max-width: 767px) {
+    width: 96px;
+    height: 96px;
   }
 `;
 
@@ -67,5 +79,10 @@ export const ButtonContainer = styled(BaseContainer)`
 
   @media (max-width: 1023px) {
     width: 200px;
+  }
+
+  @media (max-width: 767px) {
+    width: 128px;
+    height: 40px;
   }
 `

@@ -18,6 +18,10 @@ export const PaddingInnerContainer = styled(InnerContainer)`
   @media (max-width: 1023px) {
     padding: 0 49px;
   }
+
+  @media (max-width: 767px) {
+    padding: 0 35px;
+  }
 `;
 
 export const TitleContainer = styled(Default)`
@@ -26,6 +30,13 @@ export const TitleContainer = styled(Default)`
   h1 {
     font-size: 48px;
     line-height: 48px;
+  }
+
+  @media (max-width: 767px) {
+    h1 {
+      font-size: 24px;
+      line-height: 32px;
+    }
   }
 `;
 
@@ -65,6 +76,14 @@ export const DescriptionContainer = styled(Default)`
     line-height: 48px;
     font-family: 'Gilroy-ExtraBold', 'Open Sans', 'Roboto', sans-serif;
   }
+
+  @media (max-width: 767px) {
+    margin-top: 32px;
+    p {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
 `;
 
 export const ButtonContainer = styled(Default)`
@@ -74,6 +93,12 @@ export const ButtonContainer = styled(Default)`
   width: 264px;
   height: 56px;
   margin-top: 72px;
+
+  @media (max-width: 767px) {
+    width: 160px;
+    height: 40px;
+    margin-top: 24px;
+  }
 `;
 
 export const SwipeDown = styled.div`
@@ -88,4 +113,10 @@ export const SwipeDown = styled.div`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  @media (max-width: 767px) {
+    width: 16px;
+    height: 36px;
+    bottom: 16px;
+  }
 `;

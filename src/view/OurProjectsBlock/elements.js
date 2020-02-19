@@ -113,6 +113,27 @@ export const GridContainer = styled.div`
           }
         }
       }
+
+      @media (max-width: 767px) {
+        &:nth-child(odd), &:nth-child(even) {
+          .grid--cell {
+            ${ImageContainer} {
+              width: 252px;
+              height: 152px;
+            }
+
+            ${ContentContainer} {
+              position: static;
+              width: 252px;
+              height: 152px;
+              padding-left: 16px;
+              justify-content: center;
+              margin-top: 0;
+              flex: none;
+            }
+          }
+        }
+      }
     }
   }
 `;

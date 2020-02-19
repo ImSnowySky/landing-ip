@@ -26,6 +26,10 @@ export const FooterContent = styled.div`
     @media (max-width: 1279px) {
       margin-right: 60px;
     }
+
+    @media (max-width: 767px) {
+      margin-right: 25px;
+    }
   }
 
   &:nth-of-type(3) {
@@ -51,8 +55,16 @@ export const FooterContent = styled.div`
       line-height: 19px;
       text-decoration: underline;
       font-family: 'Golos-Regular', 'Open Sans', sans-serif;
+
+      @media (max-width: 767px) {
+        font-size: 14px;
+      }
     }
 
     &:last-child { margin-top: 8px }
+  }
+
+  @media (max-width: 767px) {
+    font-size: 14px;
   }
 `;

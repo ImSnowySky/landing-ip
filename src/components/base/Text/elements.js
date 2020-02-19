@@ -27,6 +27,11 @@ export const TextWrapper = styled.div`
       line-height: 42px;
 
       font-family: 'Gilroy-Light', 'Open Sans', 'Roboto', sans-serif;
+
+      @media (max-width: 767px) {
+        font-size: 24px;
+        line-height: 28px;
+      }
     }
   `}
 `;
