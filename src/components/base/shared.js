@@ -29,7 +29,7 @@ export const InnerContainer = styled.div`
     margin: ${({ withMargin }) => withMargin ? 48 : 0}px auto;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 567px) {
     width: 375px;
   }
 

@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import menuLight from './assets/menu-light.svg';
+import menuDark from './assets/menu-dark.svg';
 
 export const HeaderWrapper = styled.div`
   display: flex;
@@ -8,7 +10,7 @@ export const HeaderWrapper = styled.div`
   background: ${({ onTop }) => onTop ? 'transparent' : 'white'};
   height: 96px;
   z-index: 15;
-  top: ${({ scrolling, onTop}) => !scrolling && !onTop ? window.screen.height : 0}px;
+  top: ${({ scrolling, onTop}) => !scrolling && !onTop ? window.innerHeight : 0}px;
   left: 0%;
 
   & > div {
@@ -59,5 +61,17 @@ export const Menu = styled.div`
 
   @media (max-width: 1023px) {
     margin-right: -24px;
+  }
+`;
+
+export const MenuIcon = styled.div`
+  width: 18px;
+  height: 12px;
+  background-image: ${({ variation = 'light' }) => `url(${variation === 'light' ? menuLight : menuDark})`};
+  transition: transform 250ms ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.25);
   }
 `;

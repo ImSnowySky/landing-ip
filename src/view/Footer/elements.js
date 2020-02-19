@@ -9,6 +9,14 @@ export const FooterWrapper = styled.div`
   background: #3D3D3D;
   display: flex;
   align-items: center;
+
+  @media (max-width: 567px) {
+    & > div {
+      flex-direction: column;
+
+      img { margin-left: -6px }
+    }
+  }
 `;
 
 export const FooterContent = styled.div`
