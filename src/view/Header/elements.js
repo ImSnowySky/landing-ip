@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import menuLight from './assets/menu-light.svg';
 import menuDark from './assets/menu-dark.svg';
+import modalMenuBG from '../WelcomeBlock/assets/bg.svg';
+import closeIcon from './assets/close.svg';
 
 export const HeaderWrapper = styled.div`
   display: flex;
@@ -25,6 +27,81 @@ export const HeaderWrapper = styled.div`
 
   @media (max-width: 767px) {
     height: 56px;
+  }
+`;
+
+export const ModalMenu = styled.div`
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  background-image: url(${modalMenuBG});
+  background-size: cover;
+  background-position: center;
+`;
+
+export const InnerModalMenu = styled.div`
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 360px;
+  height: 100%;
+  margin: 0 auto;
+
+  @media (max-width: 375px) {
+    width: 320px;
+  }
+`;
+
+export const CloseMenuIcon = styled.div`
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background-image: url(${closeIcon});
+  background-size: cover;
+  z-index: 10;
+  transition: transform 250ms ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.25);
+  }
+
+  @media (max-width: 375px) {
+    right: 36px;
+  }
+`;
+
+export const ModalMenuItems = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+
+  ul {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+    li {
+      flex: none;
+
+      a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 40px;
+      }
+    }
   }
 `;
 

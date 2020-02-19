@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeaderWrapper, Menu, MenuIcon } from './elements';
+import { HeaderWrapper, Menu, ModalMenu, InnerModalMenu, MenuIcon, ModalMenuItems, CloseMenuIcon } from './elements';
 import List from '../../components/base/List';
 import withID from '../../components/helpers/withID';
 import { InnerContainer } from '../../components/base/shared';
@@ -9,6 +9,7 @@ const Header = () => {
   const [onTop, changeOnTop] = React.useState(true);
   const [scrolling, changeScrolling] = React.useState(false);
   const [menuAsIcon, changeMenuAsIcon] = React.useState(window.innerWidth > 567 ? false : true);
+  const [showModalMenu, changeShowModalMenu] = React.useState(false);
 
   const changeHeaderPosition = () => {
     const { scrollY } = window;
@@ -37,11 +38,31 @@ const Header = () => {
 
   return (
     <HeaderWrapper onTop = {onTop} scrolling = {scrolling}>
+      {
+        showModalMenu
+          ? <ModalMenu>
+              <InnerModalMenu>
+                <CloseMenuIcon onClick = {() => changeShowModalMenu(false)}/>
+                <ModalMenuItems>
+                  <List direction = 'column' elements = {[
+                    <a href = "#">Услуги</a>,
+                    <a href = "#">Портфолио</a>,
+                    <a href = "#">Обратная связь</a>,
+                    <a href = "#">8-800-555-35-35</a>,
+                  ]}/>
+                </ModalMenuItems>
+              </InnerModalMenu>
+            </ModalMenu>
+          : null
+      }
       <InnerContainer>
         <Logo variation = {onTop ? 'light' : 'dark'} />
         {
           menuAsIcon
-            ? <MenuIcon variation = {onTop ? 'light' : 'dark' } />
+            ? <MenuIcon
+                variation = {onTop ? 'light' : 'dark' }
+                onClick = {() => changeShowModalMenu(true)}
+              />
             : <Menu onTop = {onTop}>
                 <List elements = {[
                   <a href = "#">Услуги</a>,
