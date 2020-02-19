@@ -52,6 +52,11 @@ export const PlaceHolder = styled.div`
       padding: 0 8px;
     `}
   }
+
+  @media (max-width: 567px) {
+    display: flex;
+    align-items: center;
+  }
 `;
 
 export const Error = styled.div`

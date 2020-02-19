@@ -81,7 +81,14 @@ export const GridContainer = styled.div`
             flex: none;
             width: 100%;
             flex-direction: row;
-            padding-top: 32px;
+
+            &:not(:first-of-type) {
+              padding-top: 32px;
+            }
+
+            &:first-of-type {
+              padding-top: 32px;
+            }
 
             & > div { flex-direction: row }
 
@@ -123,13 +130,32 @@ export const GridContainer = styled.div`
             }
 
             ${ContentContainer} {
-              position: static;
               width: 252px;
               height: 152px;
-              padding-left: 16px;
-              justify-content: center;
-              margin-top: 0;
-              flex: none;
+            }
+          }
+        }
+      }
+
+      @media (max-width: 567px) {
+        &:nth-child(odd), &:nth-child(even) {
+          .grid--cell {
+            &:nth-child(even), &:nth-child(odd) {
+              & > div {
+                flex-direction: column;
+              }
+              ${ImageContainer} {
+                width: 100%;
+                height: 180px;
+              }
+
+              ${ContentContainer} {
+                width: 100%;
+                height: auto;
+                margin-top: 16px;
+                text-align: left;
+                padding: 0;
+              }
             }
           }
         }

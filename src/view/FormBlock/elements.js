@@ -41,6 +41,10 @@ export const FormContainer = styled.div`
   @media (max-width: 767px) {
     height: 680px;
   }
+
+  @media (max-width: 567px) {
+    height: 752px
+  }
 `;
 
 export const ContactsContainer = styled.div`
@@ -66,6 +70,13 @@ export const ContactsContainer = styled.div`
     padding: 32px 12px;
     height: 250px;
   }
+
+  @media (max-width: 567px) {
+    width: 240px;
+    top: -16px;
+    transform: none;
+    height: 314px;
+  }
 `;
 
 export const FormWrapper = styled.div`
@@ -89,6 +100,11 @@ export const FormWrapper = styled.div`
       font-size: 12px;
       line-height: 18px;
     }
+
+    @media (max-width: 567px) {
+      font-size: 14px;
+      line-height: 23px;
+    }
   }
 
   @media (max-width: 1023px) {
@@ -100,6 +116,12 @@ export const FormWrapper = styled.div`
   @media (max-width: 767px) {
     width: 520px;
     height: 424px;
+  }
+
+  @media (max-width: 567px) {
+    width: 100%;
+    height: 456px;
+    padding: 24px;
   }
 `;
 
@@ -134,6 +156,16 @@ export const ButtonContainer = styled.div`
       line-height: 22px;
     }
   }
+
+  @media (max-width: 567px) {
+    width: 128px;
+    height: 40px;
+
+    div span.btn-text {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
 `;
 
 export const ContactsTitle = styled.div`
@@ -149,6 +181,7 @@ export const ContactsTitle = styled.div`
 
   @media (max-width: 767px) {
     margin-bottom: 16px;
+    font-size: 16px;
   }
 `;
 
@@ -163,6 +196,10 @@ export const ContactsInfo = styled.div`
       margin-top: 16px;
     }
   }
+
+  @media (max-width: 567px) {
+    display: block;
+  }
 `;
 
 export const ContactsInfoBlock = styled.div`
@@ -176,6 +213,14 @@ export const ContactsInfoBlock = styled.div`
     flex: 1;
     padding: 0 30px;
   }
+
+  @media (max-width: 567px) {
+    padding: 0 16px;
+
+    &:not(:first-of-type) {
+      margin-top: 16px;
+    }
+  }
 `;
 
 export const ContactsInfoTitle = styled.div`
@@ -184,6 +229,10 @@ export const ContactsInfoTitle = styled.div`
   line-height: 24px;
   font-weight: 500;
   ${props => props.centered && css`text-align: center;`};
+
+  @media (max-width: 567px) {
+    font-size: 16px;
+  }
 `;
 
 export const ContactsInfoText = styled.div`
@@ -208,6 +257,7 @@ export const Messenger = styled.div`
   height: 40px;
   border-radius: 50%;
   background-image: ${({ icon }) => `url(${getIcon(icon)})`};
+  background-size: cover;
 
   &:hover {
     background-image: ${({ icon }) => `url(${getIcon(icon, 'hover')})`}
@@ -215,5 +265,14 @@ export const Messenger = styled.div`
 
   &:not(:last-of-type) {
     margin-right: 32px;
+  }
+
+  @media (max-width: 567px) {
+    width: 32px;
+    height: 32px;
+
+    &:not(:last-of-type) {
+      margin-right: 24px;
+    }
   }
 `;

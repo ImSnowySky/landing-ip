@@ -28,6 +28,10 @@ export const InnerContainer = styled.div`
     padding: 0 24px;
     margin: ${({ withMargin }) => withMargin ? 48 : 0}px auto;
   }
+
+  @media (max-width: 576px) {
+    width: 375px;
+  }
 `;
 
 export const TitleContainer = styled.div`
@@ -39,5 +43,10 @@ export const TitleContainer = styled.div`
     font-size: 32px;
     line-height: 40px;
     font-weight: 800;
+
+    @media (max-width: 567px) {
+      font-size: 26px;
+      line-height: 34px;
+    }
   }
 `;

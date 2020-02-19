@@ -39,6 +39,12 @@ export const GridContainer = styled.div`
         height: 192px;
       }
     }
+
+    @media (max-width: 567px) {
+      &--cell {
+        height: 316px;
+      }
+    }
   }
 `;
 

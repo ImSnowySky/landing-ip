@@ -32,6 +32,11 @@ export const TextWrapper = styled.div`
         font-size: 24px;
         line-height: 28px;
       }
+
+      @media (max-width: 567px) {
+        font-size: 21px;
+        line-height: 28px
+      }
     }
   `}
 `;
