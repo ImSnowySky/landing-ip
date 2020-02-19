@@ -49,6 +49,11 @@ export const ContentContainer = styled(BaseContainer)`
     h3.title { font-size: 20px; line-height: 29px; }
     p.content { font-size: 16px; line-height: 24px; }
   }
+
+  @media (max-width: 375px) {
+    h3.title { font-size: 16px; line-height: 20px }
+    p.content { font-size: 14px; line-height: 18px }
+  }
 `;
 
 export const ImageContainer = styled(BaseContainer)`
@@ -78,6 +83,10 @@ export const ImageContainer = styled(BaseContainer)`
 export const PriceContainer = styled(BaseContainer)`
   left: 0;
   bottom: 0;
+
+  @media (max-width: 375px) {
+    bottom: 56px;
+  }
 `;
 
 export const ButtonContainer = styled(BaseContainer)`
@@ -97,5 +106,9 @@ export const ButtonContainer = styled(BaseContainer)`
   @media (max-width: 767px) {
     width: 106px;
     height: 40px;
+  }
+
+  @media (max-width: 375px) {
+    width: 100%;
   }
 `

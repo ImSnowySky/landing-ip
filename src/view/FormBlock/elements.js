@@ -45,6 +45,10 @@ export const FormContainer = styled.div`
   @media (max-width: 567px) {
     height: 752px
   }
+
+  @media (max-width: 375px) {
+    height: 792px;
+  }
 `;
 
 export const ContactsContainer = styled.div`
@@ -76,6 +80,10 @@ export const ContactsContainer = styled.div`
     top: -16px;
     transform: none;
     height: 314px;
+  }
+
+  @media (max-width: 375px) {
+    width: 212px;
   }
 `;
 
@@ -122,6 +130,10 @@ export const FormWrapper = styled.div`
     width: 100%;
     height: 456px;
     padding: 24px;
+  }
+
+  @media (max-width: 375px) {
+    height: 490px;
   }
 `;
 

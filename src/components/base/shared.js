@@ -32,6 +32,10 @@ export const InnerContainer = styled.div`
   @media (max-width: 576px) {
     width: 375px;
   }
+
+  @media (max-width: 374px) {
+    width: 100%;
+  }
 `;
 
 export const TitleContainer = styled.div`

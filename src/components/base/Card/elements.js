@@ -21,4 +21,9 @@ export const CardInnerContainer = styled(BaseBlock)`
   margin: 24px 32px;
   height: 100%;
   width: calc(100% - 64px);
+
+  @media (max-width: 375px) {
+    margin: 24px 16px;
+    width: calc(100% - 32px);
+  }
 `;

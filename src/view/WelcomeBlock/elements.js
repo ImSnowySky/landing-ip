@@ -45,6 +45,13 @@ export const TitleContainer = styled(Default)`
       line-height: 49px;
     }
   }
+
+  @media (max-width: 374) {
+    h1 {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
 `;
 
 export const VideoWrapper = styled.div`
@@ -96,6 +103,13 @@ export const DescriptionContainer = styled(Default)`
     p {
       font-size: 18px;
       line-height: 29px;
+    }
+  }
+
+  @media (max-width: 374px) {
+    p {
+      font-size: 14px;
+      line-height: 18px;
     }
   }
 `;
