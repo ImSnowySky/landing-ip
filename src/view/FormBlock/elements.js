@@ -20,7 +20,6 @@ export const TitleContainer = styled.div`
   h2 {
     font-size: 32px;
     line-height: 32px;
-    font-weight: 800;
   }
 `;
 
@@ -181,7 +180,6 @@ export const ButtonContainer = styled.div`
 `;
 
 export const ContactsTitle = styled.div`
-  font-weight: 800;
   font-size: 24px;
   line-height: 24px;
   color: #242424;
@@ -267,7 +265,6 @@ export const MessengerBlock = styled.div`
 export const Messenger = styled.div`  
   width: 40px;
   height: 40px;
-  border-radius: 50%;
   background-image: ${({ icon }) => `url(${getIcon(icon)})`};
   background-size: cover;
 

@@ -46,7 +46,6 @@ export const TitleContainer = styled.div`
   h2 {
     font-size: 32px;
     line-height: 40px;
-    font-weight: 800;
 
     @media (max-width: 567px) {
       font-size: 26px;

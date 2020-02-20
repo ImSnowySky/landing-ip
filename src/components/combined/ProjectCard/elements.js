@@ -20,7 +20,6 @@ export const ContentContainer = styled.div`
 `;
 
 export const Title = styled.div`
-  font-weight: 800;
   font-size: 24px;
   line-height: 24px;
 `;
