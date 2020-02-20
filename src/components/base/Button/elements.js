@@ -15,6 +15,7 @@ export const ButtonContainer = styled.div`
   background: ${({ primary = false }) => primary ? '#fff' : 'transparent'};
 
   transition: background 0.2s ease-in-out;
+  cursor: pointer;
 
   ${props => {
     if (props.hover && !props.disabled) return css`

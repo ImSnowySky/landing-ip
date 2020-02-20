@@ -71,7 +71,7 @@ class Input extends React.Component {
             ? <RealInput ref = {this.inputRef} value = {value ? value : ''} onChange = {this.handleChange}/> 
             : null 
         }
-        { error && <Error>{error}</Error>}
+        { error && <Error className = {'input-error'}>{error}</Error>}
       </InputControll>
     );
   }
