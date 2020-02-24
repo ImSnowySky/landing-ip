@@ -44,11 +44,11 @@ export const TitleContainer = styled.div`
   text-align: center;
 
   h2 {
-    font-size: 32px;
+    font-size: 36px;
     line-height: 40px;
 
     @media (max-width: 567px) {
-      font-size: 26px;
+      font-size: 28px;
       line-height: 34px;
     }
   }
