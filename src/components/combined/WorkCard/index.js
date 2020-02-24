@@ -13,26 +13,26 @@ import mobile from './assets/mobile.svg';
 const images = { monitor, notebook, statistic, mobile };
 const getImgByName = name => images[name] || null;
 
-const WorkCard = props => 
+const WorkCard = ({ title, text, img, price, onClick = () => { }}) => 
   <Card fullHeight withShadow withPadding>
     <ContentContainer>
       <Text type = 'h3' className = 'title'>
-        {props.title}
+        {title}
       </Text>
       <Text type = 'p' className = 'content'>
-        {props.text}
+        {text}
       </Text>
     </ContentContainer>
     <ImageContainer>
-      <img src = {getImgByName(props.img)} />
+      <img src = {getImgByName(img)} />
     </ImageContainer>
     {
-      props.price && <PriceContainer>
-        <Text type = 'span' accent>от {props.price} ₽</Text>
+      price && <PriceContainer>
+        <Text type = 'span' accent>от {price} ₽</Text>
       </PriceContainer>
     }
     <ButtonContainer>
-      <Button>Заказать</Button>
+      <Button onClick = {onClick}>Заказать</Button>
     </ButtonContainer>
   </Card>
 

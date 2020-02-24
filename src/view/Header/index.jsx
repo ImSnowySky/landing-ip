@@ -10,6 +10,7 @@ const Header = () => {
   const [scrolling, changeScrolling] = React.useState(false);
   const [menuAsIcon, changeMenuAsIcon] = React.useState(window.innerWidth > 567 ? false : true);
   const [showModalMenu, changeShowModalMenu] = React.useState(false);
+  const [active, changeActive] = React.useState(false);
 
   const changeHeaderPosition = () => {
     const { scrollY } = window;
@@ -19,6 +20,13 @@ const Header = () => {
 
     if (scrollY >= window.innerHeight && !scrolling) changeScrolling(true);
     else if (scrollY < window.innerHeight && scrolling) changeScrolling(false);
+
+    const blocks = ['#what-we-do', '#our-projects', '#form-block'];
+    const blockPositions = blocks.map(block => document.querySelectorAll(block)[0].getBoundingClientRect().top - 72);
+    const scrolledBlocks = blockPositions.filter(position => position < 0);
+    if (scrolledBlocks && scrolledBlocks.length > 0) {
+      changeActive(scrolledBlocks.length - 1);
+    } else changeActive(false);
   }
 
   const changeMenuVisibility = () => {
@@ -45,10 +53,10 @@ const Header = () => {
                 <CloseMenuIcon onClick = {() => changeShowModalMenu(false)}/>
                 <ModalMenuItems>
                   <List direction = 'column' elements = {[
-                    <a href = "#">Услуги</a>,
-                    <a href = "#">Портфолио</a>,
-                    <a href = "#">Обратная связь</a>,
-                    <a href = "#">8-800-555-35-35</a>,
+                    <a href = "#what-we-do">Услуги</a>,
+                    <a href = "#our-projects">Портфолио</a>,
+                    <a href = "#form-block">Обратная связь</a>,
+                    <a href = "tel:88005553535">8-800-555-35-35</a>,
                   ]}/>
                 </ModalMenuItems>
               </InnerModalMenu>
@@ -65,11 +73,11 @@ const Header = () => {
               />
             : <Menu onTop = {onTop}>
                 <List elements = {[
-                  <a href = "#">Услуги</a>,
-                  <a href = "#">Портфолио</a>,
-                  <a href = "#">Обратная связь</a>,
-                  <a href = "#">8-800-555-35-35</a>,
-                ]}/>
+                    <a href = "#what-we-do">Услуги</a>,
+                    <a href = "#our-projects">Портфолио</a>,
+                    <a href = "#form-block">Обратная связь</a>,
+                    <a href = "tel:88005553535">8-800-555-35-35</a>,
+                ]} active = {active}/>
               </Menu>
         }
       </InnerContainer>

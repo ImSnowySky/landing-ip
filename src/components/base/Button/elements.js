@@ -32,7 +32,7 @@ export const ButtonContainer = styled.div`
     pointer-events: none;
 
     .btn-text {
-      color: rgba(36, 36, 36, 0.4);
+      color: rgba(36, 36, 36, 0.4) !important;
     }
   `};
 

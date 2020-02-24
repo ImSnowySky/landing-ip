@@ -31,7 +31,7 @@ const FormBlock = () => {
         </TitleContainer>
         <FormContainer>
           <FormWrapper>
-            <Text type = 'span'>Заполните заявку или свяжитесь с нами любым удобным вам способом и мы сделаем всё за вас.</Text>
+            <Text type = 'span'>Заполните заявку или свяжитесь с нами любым удобным вам способом.</Text>
             <InputWrapper>
               <Input
                 isRequired

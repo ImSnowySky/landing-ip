@@ -8,6 +8,7 @@ import bgVideo from './assets/bg-video.mp4';
 
 class WelcomeBlock extends React.Component {
   render() {
+    const { showModal } = this.props;
     return (
       <Container justify = 'center' fullHeight style = {{ marginBottom: 64 }}>
         <VideoWrapper>
@@ -23,7 +24,7 @@ class WelcomeBlock extends React.Component {
             <Text type = 'p'>Мы занимаемся проектированием сайтов и интерфейсов, их разработкой и аналитикой</Text>
           </DescriptionContainer>
           <ButtonContainer>
-            <Button primary>Обсудить проект</Button>
+            <Button primary onClick = {showModal}>Обсудить проект</Button>
           </ButtonContainer>
         </PaddingInnerContainer>
         <SwipeDown />

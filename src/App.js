@@ -5,18 +5,28 @@ import OurProjectsBlock from './view/OurProjectsBlock';
 import Header from './view/Header';
 import FormBlock from './view/FormBlock';
 import Footer from './view/Footer';
+import ModalFrom from './view/ModalForm';
 
 class App extends React.Component {
+  state = { isModalVisible: false };
+
+  showModal = () => this.setState({ isModalVisible: true });
+  hideModal = () => this.setState({ isModalVisible: false });
+
   componentDidMount() {
     window.scroll(0, 0);
   }
 
   render() {
+    const { isModalVisible } = this.state;
     return (
       <>
+        {
+          isModalVisible ? <ModalFrom hideModal = {this.hideModal}/> : null
+        }
         <Header />
-        <WelcomeBlock />
-        <WhatWeDoBlock />
+        <WelcomeBlock showModal = {this.showModal} />
+        <WhatWeDoBlock showModal = {this.showModal} />
         <OurProjectsBlock />
         <FormBlock />
         <Footer />

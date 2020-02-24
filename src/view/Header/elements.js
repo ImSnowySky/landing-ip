@@ -116,10 +116,6 @@ export const Menu = styled.div`
 
   ul { height: 17px; }
 
-  ul:hover li:not(:hover) {
-    filter: blur(2px);
-  }
-
   li {
     transition: filter 250ms ease-in-out;
     font-size: 14px;
