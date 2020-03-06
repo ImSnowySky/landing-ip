@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeaderWrapper, Menu, ModalMenu, InnerModalMenu, MenuIcon, ModalMenuItems, CloseMenuIcon } from './elements';
+import { HeaderWrapper, Menu, ModalMenu, InnerModalMenu, MenuIcon, ModalMenuItems, CloseMenuIcon, IEMiddleBanner } from './elements';
 import List from '../../components/base/List';
 import withID from '../../components/helpers/withID';
 import { InnerContainer } from '../../components/base/shared';
@@ -65,6 +65,7 @@ const Header = () => {
       }
       <InnerContainer>
         <Logo variation = {onTop ? 'light' : 'dark'} />
+        <IEMiddleBanner />
         {
           menuAsIcon
             ? <MenuIcon

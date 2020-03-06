@@ -1,6 +1,7 @@
 @font-face {
 	font-family: 'Golos-Regular';
 	src: url('./regular.ttf') format('truetype');
+	src: url('./regular.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -8,6 +9,7 @@
 @font-face {
 	font-family: 'Golos-Medium';
 	src: url('./medium.ttf') format('truetype');
+	src: url('./medium.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -15,6 +17,7 @@
 @font-face {
 	font-family: 'Golos-Bold';
 	src: url('./bold.ttf') format('truetype');
+	src: url('./bold.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -22,6 +25,7 @@
 @font-face {
 	font-family: 'Golos-Demibold';
 	src: url('./demibold.ttf') format('truetype');
+	src: url('./demibold.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }

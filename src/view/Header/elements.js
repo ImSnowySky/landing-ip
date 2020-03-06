@@ -105,6 +105,10 @@ export const ModalMenuItems = styled.div`
   }
 `;
 
+export const IEMiddleBanner = styled.div`
+  flex: 1 0 auto;
+`;
+
 export const Menu = styled.div`
   display: inline-flex;
   justify-self: flex-end;
@@ -112,7 +116,6 @@ export const Menu = styled.div`
   height: 100%;
   justify-content: center;
   align-items: center;
-  margin-left: auto;
 
   ul { height: 17px; }
 

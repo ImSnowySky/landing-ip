@@ -9,6 +9,10 @@ const Default = styled.div`
 `;
 
 export const PaddingInnerContainer = styled(InnerContainer)`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   padding: 0 88px;
 
   @media (max-width: 1279px) {

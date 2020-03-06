@@ -1,9 +1,11 @@
 @font-face {
   font-family: 'Gilroy-Light';
-  src: url('light.ttf') format('truetype');
+  src: url('./light.ttf') format('truetype');
+	src: url('./light.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Gilroy-ExtraBold';
-  src: url('extra-bold.ttf') format('truetype');
+  src: url('./extra-bold.ttf') format('truetype');
+	src: url('./extra-bold.woff') format('woff');
 }
