@@ -46,27 +46,25 @@ export const GridContainer = styled.div`
 
       &:nth-child(even) {
         .grid--cell {
-          width: 552px;
+          width: 100%;
           flex: none;
           ${ImageContainer} { height: 200px; width: 264px; border-radius: 10px; }
           ${ContentContainer} {
             position: absolute;
             top: 0;
             left: 288px;
-            width: 264px;
+            width: calc(100% - 288px);
             margin-top: 0;
             height: 200px;
             justify-content: center;
           }
 
           @media (max-width: 1279px) {
-            width: 468px;
-
             ${ImageContainer} { height: 152px; width: 216px; }
             ${ContentContainer} {
               left: 232px;
               height: 152px;
-              width: 206px;
+              width: calc(100% - 232px);
             }
           }
         }

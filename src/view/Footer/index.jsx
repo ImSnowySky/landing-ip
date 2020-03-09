@@ -12,8 +12,8 @@ const Footer = () => <FooterWrapper>
       <div><Text type = 'span'>© Студия «Радиан», 2020</Text></div>
     </FooterContent>
     <FooterContent>
-      <div><Text type = 'span'>info@3kitayca.ru</Text></div>
-      <div><Text type = 'span'>8-800-555-35-35</Text></div>
+      <div><a href = "mailto:talk@radian.work"><Text type = 'span'>talk@radian.work</Text></a></div>
+      <div><a href = "tel:88005553535"><Text type = 'span'>8-800-555-35-35</Text></a></div>
     </FooterContent>
     <FooterContent>
       <div><a href = '#'>Политика конфиденциальности</a></div>
