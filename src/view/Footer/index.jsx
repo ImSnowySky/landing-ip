@@ -13,7 +13,6 @@ const Footer = () => <FooterWrapper>
     </FooterContent>
     <FooterContent>
       <div><a href = "mailto:talk@radian.work"><Text type = 'span'>talk@radian.work</Text></a></div>
-      <div><a href = "tel:88005553535"><Text type = 'span'>8-800-555-35-35</Text></a></div>
     </FooterContent>
     <FooterContent>
       <div><a href = '#'>Политика конфиденциальности</a></div>

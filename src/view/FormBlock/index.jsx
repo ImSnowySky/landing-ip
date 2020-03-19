@@ -72,12 +72,8 @@ const FormBlock = props => {
             <ContactsTitle><Text type = 'h3'>Контакты</Text></ContactsTitle>
             <ContactsInfo>
               <ContactsInfoBlock>
-                <ContactsInfoTitle><Text type = 'h4'>Телефон</Text></ContactsInfoTitle>
-                <ContactsInfoText><Text type = 'span'>8-800-555-35-35</Text></ContactsInfoText>
-              </ContactsInfoBlock>
-              <ContactsInfoBlock>
-                <ContactsInfoTitle><Text type = 'h4'>Телефон</Text></ContactsInfoTitle>
-                <ContactsInfoText><Text type = 'span'>8-800-555-35-35</Text></ContactsInfoText>                  
+                <ContactsInfoTitle centered><Text type = 'h4'>Почта</Text></ContactsInfoTitle>
+                <ContactsInfoText><Text type = 'span'>talk@radian.work</Text></ContactsInfoText>
               </ContactsInfoBlock>
             </ContactsInfo>
             <ContactsInfo>

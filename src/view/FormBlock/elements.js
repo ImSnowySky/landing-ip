@@ -26,7 +26,7 @@ export const TitleContainer = styled.div`
 export const FormContainer = styled.div`
   width: 960px;
   height: 518px;
-  margin: 96px auto 0;
+  margin: 96px auto 0 130px;
   display: flex;
 
   @media (max-width: 1023px) {
@@ -51,7 +51,7 @@ export const FormContainer = styled.div`
 `;
 
 export const ContactsContainer = styled.div`
-  width: 408px;
+  width: 278px;
   height: 288px;
   background: #F0F2F3;
   border-radius: 0px 16px 16px 0px;
@@ -184,6 +184,7 @@ export const ContactsTitle = styled.div`
   line-height: 24px;
   color: #242424;
   margin-bottom: 32px;
+  text-align: center;
 
   @media (max-width: 1023px) {
     text-align: center;
@@ -215,8 +216,10 @@ export const ContactsInfo = styled.div`
 export const ContactsInfoBlock = styled.div`
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
   color: #242424;
+  justify-content: center;
+  align-items: center;
 
   @media (max-width: 1023px) {
     width: auto;
