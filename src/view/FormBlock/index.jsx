@@ -16,12 +16,16 @@ const sendMail = (name, contact, comment) => {
   }).then(message => alert(message));
 }
 
-const FormBlock = () => {
+const FormBlock = props => {
   const [name, changeName] = React.useState(null);
   const [contact, changeContact] = React.useState(null);
   const [comment, changeComment] = React.useState(null);
 
-  const withError = [...document.getElementsByClassName('input-error')];
+  const modal = document.getElementById('modal');
+
+  const withError = [];
+  if (props.modal && modal) withError.push(...modal.getElementsByClassName('input-error'))
+  else withError.push(...document.getElementsByClassName('input-error'))
 
   return (
     <Container bgColor = '#fff'>

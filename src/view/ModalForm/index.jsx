@@ -23,9 +23,9 @@ export default class ModalForm extends React.Component {
     const { hideModal = () => { } } = this.props;
     const { width = window.innerWidth, height = window.innerHeight } = this.state;
     return (
-      <ModalView width = {width} height = {height}>
+      <ModalView width = {width} height = {height} id = "modal">
         <CloseButton onClick = {hideModal}/>
-        <FormBlock />
+        <FormBlock modal/>
       </ModalView>
     );
   }
