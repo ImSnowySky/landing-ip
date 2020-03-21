@@ -9,19 +9,37 @@ import { InnerContainer, TitleContainer } from '../../components/base/shared';
 import withID from '../../components/helpers/withID';
 import mailConfig from './config';
 
-const sendMail = (name, contact, comment) => {
-  window.Email.send({
-    ...mailConfig,
-    Body: `${name} ${contact} ${comment}`,
-  }).then(message => alert(message));
-}
-
 const FormBlock = props => {
   const [name, changeName] = React.useState(null);
   const [contact, changeContact] = React.useState(null);
   const [comment, changeComment] = React.useState(null);
+  const [sended, changeSended] = React.useState(false);
 
   const modal = document.getElementById('modal');
+
+  const sendMail = (name, contact, comment) => {
+    window.Email.send({
+      ...mailConfig,
+      Body: `
+      <h1 style = "font-size: 24px; line-height: 32px; width: 480px; text-align: center; margin: 0 auto 32px">
+        Веб-студия Radian
+      </h1>
+      <div style = "width: 446px; margin: 0 auto; border-radius: 10px; padding: 24px; border: 1px solid lightgray;">
+        <b>Имя</b>
+        <div style = "width:100%; padding: 8px 0px 8px 8px; border: 1px solid lightgray; margin: 0 0 8px 0">
+          ${name}
+        </div>
+        <b>Контакт</b>
+        <div style = "width:446px; padding: 8px 0px 8px 8px; border: 1px solid lightgray; margin: 0 0 8px 0">
+          ${contact}
+        </div>
+        <b>Комментарий</b>
+        <div style = "width:446px; padding: 8px 0px 8px 8px; border: 1px solid lightgray; margin: 0 0 8px 0">
+          ${comment}
+        </div>
+      </div>`,
+    }).then(() => changeSended(true));
+  }
 
   const withError = [];
   if (props.modal && modal) withError.push(...modal.getElementsByClassName('input-error'))
@@ -40,14 +58,14 @@ const FormBlock = props => {
               <Input
                 isRequired
                 placeholder = 'Ваше имя'
-                regexp = {/[a-zA-Zа-яА-Я\s-\.]+/g}
+                regexp = {/[a-zA-Zа-яА-ЯёЁ\s-\.]+/g}
                 regExpErrorText = 'Неверный формат имени'
                 onChange={changeName}
               />
               <Input
                 isRequired
                 placeholder = 'Ваше телефон или e-mail'
-                regexp = {/[a-zA-Z\@\.0-9]+/g}
+                regexp = {/[a-zA-Z\@\.0-9\-\_]+/g}
                 regExpErrorText = 'Неверный формат телефона или почты'
                 onChange={changeContact}
               />
@@ -61,10 +79,10 @@ const FormBlock = props => {
             </InputWrapper>
             <ButtonContainer>
               <Button
-                disabled = {(name === null || contact === null) || withError.length > 0}
+                disabled = {sended ? true : (name === null || contact === null) || withError.length > 0}
                 onClick = {() => sendMail(name, contact, comment)}
               >
-                Отправить
+                {sended ? 'Отправлено' : 'Отправить'}
               </Button>
             </ButtonContainer>
           </FormWrapper>
