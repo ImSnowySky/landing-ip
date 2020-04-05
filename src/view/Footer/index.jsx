@@ -15,7 +15,7 @@ const Footer = () => <FooterWrapper>
       <div><a href = "mailto:talk@radian.work"><Text type = 'span'>talk@radian.work</Text></a></div>
     </FooterContent>
     <FooterContent>
-      <div><a href = '#'>Политика конфиденциальности</a></div>
+      <div><a href = '/policy.pdf'>Политика конфиденциальности</a></div>
     </FooterContent>
   </InnerContainer>
 </FooterWrapper>

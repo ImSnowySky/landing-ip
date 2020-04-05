@@ -56,7 +56,6 @@ const Header = () => {
                     <a href = "#what-we-do">Услуги</a>,
                     <a href = "#our-projects">Портфолио</a>,
                     <a href = "#form-block">Обратная связь</a>,
-                    <a href = "tel:88005553535">8-800-555-35-35</a>,
                   ]}/>
                 </ModalMenuItems>
               </InnerModalMenu>
@@ -77,7 +76,6 @@ const Header = () => {
                     <a href = "#what-we-do">Услуги</a>,
                     <a href = "#our-projects">Портфолио</a>,
                     <a href = "#form-block">Обратная связь</a>,
-                    <a href = "tel:88005553535">8-800-555-35-35</a>,
                 ]} active = {active}/>
               </Menu>
         }

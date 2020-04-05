@@ -75,7 +75,7 @@ const FormBlock = props => {
                 regExpErrorText = 'Неверный формат бюджета'
                 onChange={changeComment}
               />
-              <Text type = 'span'>Нажимая на кнопку ниже, вы даёте согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности.</Text>
+              <Text type = 'span'>Нажимая на кнопку ниже, вы даёте согласие на обработку персональных данных и соглашаетесь с <a href = '/policy.pdf'>политикой конфиденциальности</a>.</Text>
             </InputWrapper>
             <ButtonContainer>
               <Button
@@ -97,7 +97,10 @@ const FormBlock = props => {
             <ContactsInfo>
                 <ContactsInfoTitle centered><Text type = 'h4'>Мессенджеры</Text></ContactsInfoTitle>
             </ContactsInfo>
-            <MessengerBlock><Messenger icon = 'telegram' /><Messenger icon = 'whatsapp' /></MessengerBlock>
+            <MessengerBlock>
+              <Messenger icon = 'telegram' href = "https://teleg.run/radian_work"/>
+              <Messenger icon = 'whatsapp' href = "https://wa.me/79221665665"/>
+            </MessengerBlock>
           </ContactsContainer>
         </FormContainer>
       </InnerContainer>

@@ -151,6 +151,17 @@ export const InputWrapper = styled.div`
     font-size: 10px;
     line-height: 12px;
     font-family: 'Golos-Normal', 'Arial', sans-serif;
+
+    a {
+      text-decoration: none;
+      color: #242424;
+      border-bottom: 1px solid gray;
+      transition: border-bottom-color 100ms ease-in-out;
+
+      &:hover{
+        border-bottom: 1px solid darkgray;
+      }
+    }
   }
 `;
 
@@ -265,7 +276,9 @@ export const MessengerBlock = styled.div`
   margin-top: 16px;
 `;
 
-export const Messenger = styled.div`  
+export const Messenger = styled.a`
+  display: block;
+  outline: none !important;
   width: 40px;
   height: 40px;
   background-image: ${({ icon }) => `url(${getIcon(icon)})`};
