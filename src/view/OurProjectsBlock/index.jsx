@@ -8,7 +8,7 @@ import cards from './cards';
 import { InnerContainer,TitleContainer } from '../../components/base/shared';
 import withID from '../../components/helpers/withID';
 
-const getElementsForGrid = cards => cards.map(card => card ? <ProjectCard title = {card.title} text = {card.text} img = {card.img} /> : null)
+const getElementsForGrid = cards => cards.map(card => card ? <ProjectCard title = {card.title} text = {card.text} img = {card.img} href = {card.href} /> : null)
 
 const OurProjectsBlock = () => <Container bgColor = '#fff'>
   <InnerContainer withMargin>

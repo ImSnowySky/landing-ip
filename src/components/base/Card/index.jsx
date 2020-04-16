@@ -1,8 +1,8 @@
 import React from 'react';
 import { CardContainer, CardInnerContainer } from './elements';
 
-const Card = ({ withShadow, withPadding, fullHeight, children }) =>
-  <CardContainer fullHeight = {fullHeight} withShadow = {withShadow}>
+const Card = ({ withShadow, withPadding, fullHeight, children, href = null }) =>
+  <CardContainer fullHeight = {fullHeight} withShadow = {withShadow} href = {href}>
     { withPadding ? <CardInnerContainer>{children}</CardInnerContainer> : children }
   </CardContainer>
 

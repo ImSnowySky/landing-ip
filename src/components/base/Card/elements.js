@@ -1,12 +1,14 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
-const BaseBlock = styled.div`
+const BaseBlock = styled.a`
   display: flex;
   flex-direction: column;
   position: relative;
   top: 0;
   left: 0;
   width: 100%;
+  outline: none !important;
+  text-decoration: none !important;
 `;
 
 export const CardContainer = styled(BaseBlock)`

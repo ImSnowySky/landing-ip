@@ -10,6 +10,9 @@ import withID from '../../components/helpers/withID';
 import mailConfig from './config';
 
 const FormBlock = props => {
+  const referrer = document.referrer;
+  const URL_WITH_PROMO = window.location.href.includes('from=VK_PROMO');
+
   const [name, changeName] = React.useState(null);
   const [contact, changeContact] = React.useState(null);
   const [comment, changeComment] = React.useState(null);
@@ -35,7 +38,12 @@ const FormBlock = props => {
         </div>
         <b>Комментарий</b>
         <div style = "width:446px; padding: 8px 0px 8px 8px; border: 1px solid lightgray; margin: 0 0 8px 0">
-          ${comment}
+          <div>
+            <span>Промокод: </span><span>${referrer && URL_WITH_PROMO ? 'VK_PROMO' : 'Без промокода'}</span>
+          </div>
+          <div>
+            ${comment}
+          </div>
         </div>
       </div>`,
     }).then(() => changeSended(true));
@@ -72,10 +80,15 @@ const FormBlock = props => {
               <Input
                 placeholder = 'Комментарий'
                 regexp = {/.*/g}
-                regExpErrorText = 'Неверный формат бюджета'
                 onChange={changeComment}
               />
               <Text type = 'span'>Нажимая на кнопку ниже, вы даёте согласие на обработку персональных данных и соглашаетесь с <a href = '/policy.pdf'>политикой конфиденциальности</a>.</Text>
+              {
+                referrer && URL_WITH_PROMO
+                  ? <Text type = 'span' style = {{color: 'green'}}>Промокод "Скидка 10%" активен</Text>
+                  : null
+              }
+              <Text type = 'span' style = {{color: 'green' }}></Text>
             </InputWrapper>
             <ButtonContainer>
               <Button

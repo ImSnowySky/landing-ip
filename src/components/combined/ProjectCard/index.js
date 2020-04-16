@@ -10,7 +10,7 @@ import { ImageContainer, ContentContainer, Title, Description } from './elements
 const images = { mamont, rnes, urber, noble };
 const getImageByName = name => images[name] || null;
 
-const ProjectCard = ({ title, text, img }) => <Card fullHeight>
+const ProjectCard = ({ title, text, img, href }) => <Card fullHeight href = {href}>
   <ImageContainer src = {getImageByName(img)}></ImageContainer>
   <ContentContainer>
     <Title><Text type = 'h3'>{title}</Text></Title>
